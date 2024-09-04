@@ -1,7 +1,7 @@
 requests==2.27.1
 werkzeug==2.3.7
 flask==2.1.2
-cryptography==38.0.3
+cryptography==43.0.1
 boto3==1.22.9
 botocore==1.25.10
 email_validator==1.2.1
