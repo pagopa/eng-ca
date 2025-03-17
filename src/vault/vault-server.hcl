@@ -7,11 +7,11 @@ listener "tcp" {
 }
 
 # Uncomment if vault data migration is needed
-#seal "shamir" {}
+seal "shamir" {}
 
 # https://www.vaultproject.io/docs/configuration/seal/awskms
-seal "awskms" {
-}
+#seal "awskms" {
+#}
 
 storage "dynamodb" {
   ha_enabled = "true"

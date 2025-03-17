@@ -105,14 +105,6 @@ resource "aws_ecs_task_definition" "ecs_task_def" {
         "value": "${var.aws_region}"
       },
       {
-        "name": "VAULT_SEAL_TYPE",
-        "value": "awskms"
-      },
-      {
-        "name": "VAULT_AWSKMS_SEAL_KEY_ID",
-        "value": "${aws_kms_key.vault_key.key_id}"
-      },
-      {
         "name": "VAULT_DISABLE_MLOCK",
         "value": "false"
       },
