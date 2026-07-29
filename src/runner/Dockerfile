@@ -1,4 +1,4 @@
-FROM ghcr.io/actions/actions-runner:2.311.0
+FROM ghcr.io/actions/actions-runner:2.311.0@sha256:e505724e0dbb070454912b159645932f74dda9aed03c48c463f33e270a6cbfa1
 
 RUN sudo apt-get update && sudo apt-get install -y zip unzip curl wget gnupg
 

@@ -59,11 +59,11 @@ jobs:
           persist-credentials: false
       # https://github.com/hashicorp/setup-terraform/issues/84#issuecomment-800515442
       - name: Install NodeJS as terraform action dep
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3
         with:
           node-version: "16"
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@67fbcbb121271f7775d2e7715933280b06314838 # v1
         with:
           aws-region: ${{ vars.AWS_REGION }}
           role-to-assume: ${{ vars.IAM_ROLE }}
@@ -100,7 +100,7 @@ jobs:
     steps:
       - name: Stop Github Runner
         id: stop_runner
-        uses: pagopa/interop-github-runner-aws-cleanup-action@main
+        uses: pagopa/interop-github-runner-aws-cleanup-action@61b18d1d3ee01be84fee72e2fa5836fc68f0a16e # main
         with:
           aws_region: ${{ vars.AWS_REGION }}
           iam_role_arn: ${{ vars.IAM_ROLE }}
